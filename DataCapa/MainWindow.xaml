@@ -1,0 +1,29 @@
+﻿<Window x:Name="DataCapa" x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataCapa"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Title="DataCapa" Height="500" Width="800" Background="White">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Exit" Click="mnuExit_Click">
+                        <MenuItem.Icon>
+                            <fa:FontAwesome Icon="Flag" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Tools">
+                    <MenuItem Header="_Manage users"/>
+                    <MenuItem Header="_Show groups" IsCheckable="True" IsChecked="True" />
+                </MenuItem>
+            </Menu>
+            <TextBox AcceptsReturn="True" />
+        </DockPanel>
+        <Button x:Name="test" Width="100" Height="50" Content="140" VerticalContentAlignment="Center" HorizontalAlignment="Center" Background="#ececec" Margin="20"/>
+    </Grid>
+</Window>
