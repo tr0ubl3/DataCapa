@@ -8,22 +8,40 @@
         mc:Ignorable="d"
         Title="DataCapa" Height="500" Width="800" Background="White">
     <Grid>
-        <DockPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" VerticalAlignment="Top">
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
+                    <MenuItem Header="_Login" Click="mnuLogin_Click">
+                        <MenuItem.Icon>
+                            <fa:FontAwesome Icon="User" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
                     <MenuItem Header="_Exit" Click="mnuExit_Click">
                         <MenuItem.Icon>
                             <fa:FontAwesome Icon="Flag" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="_Tools">
+                <!--<MenuItem Header="_Tools">
                     <MenuItem Header="_Manage users"/>
                     <MenuItem Header="_Show groups" IsCheckable="True" IsChecked="True" />
-                </MenuItem>
+                </MenuItem>-->
             </Menu>
-            <TextBox AcceptsReturn="True" />
         </DockPanel>
-        <Button x:Name="test" Width="100" Height="50" Content="140" VerticalContentAlignment="Center" HorizontalAlignment="Center" Background="#ececec" Margin="20"/>
+        
+        <Frame Name="yeld" Grid.Row="1">
+            
+        </Frame>
+        
+
+        <StatusBar Grid.Row="2" x:Name="StatusBar" Height="20" Width="{Binding ActualWidth, ElementName=parentElementName}" VerticalAlignment="Bottom">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top">Test</TextBlock>
+        </StatusBar>
     </Grid>
 </Window>
